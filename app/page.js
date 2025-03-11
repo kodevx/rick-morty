@@ -1,7 +1,7 @@
 'use client'
 
 import useHome from "@/customHooks/Home/useHome";
-import GET_ALL_CARTOON_CHARACTER_QUERY from '@/queries/getAllCartoonCharacters.graphql';
+import GET_CARTOON_CHARACTER_BY_ID_QUERY from '@/queries/getCartoonCharactersById.graphql';
 
 export default function Home() {
 
@@ -11,15 +11,16 @@ export default function Home() {
     error 
   } = useHome({
     queries: { 
-      getAllCartoonCharactersQuery: GET_ALL_CARTOON_CHARACTER_QUERY 
+      getCartoonCharactersByIdQuery: GET_CARTOON_CHARACTER_BY_ID_QUERY
     }
   });
 
   return (
     <div>
-      <main>
-        Homepage
+      <main className="font-grobold text-2xl">
+        Ricky N Morty
       </main>
+      <div className="font-bluetea text-2xl">Bluetea</div>
     </div>
   );
 }
