@@ -1,4 +1,21 @@
 @import "tailwindcss";
+@config "../tailwind.config.js";
+
+@font-face {
+  font-family: Grobold;
+  src: url(/public/Fonts/Grobold/Grobold-any9.woff2) format('woff2'),
+       url(/public/Fonts/Grobold/Grobold-any9.woff) format('woff'),
+       url(/public/Fonts/Grobold/Grobold-any9.svg) format('svg'),
+       url(/public/Fonts/Grobold/Grobold.ttf) format('ttf')
+}
+
+@font-face {
+  font-family: Bluetea;
+  src: url(/public/Fonts/Bluetea/Bluetea.woff2) format('woff2'),
+       url(/public/Fonts/Bluetea/Bluetea.woff) format('woff'),
+       url(/public/Fonts/Bluetea/Bluetea.svg) format('svg'),
+       url(/public/Fonts/Bluetea/Bluetea.ttf) format('ttf')
+}
 
 :root {
   --background: #ffffff;
