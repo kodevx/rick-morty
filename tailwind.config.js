@@ -9,7 +9,11 @@ module.exports = {
       extend: {
         fontFamily: {
           grobold: ['Grobold','sans-serif'],
-          bluetea: ['Bluetea','sans-serif']
+          bluetea: ['Bluetea','sans-serif'],
+          arnorg: ['Arnorg','serif'],
+          badaga: ['Badaga','sans-serif'],
+          goldieBoxing: ['GoldieBoxing'],
+          hfcomic: ['HFComic'],
         },
       },
     },

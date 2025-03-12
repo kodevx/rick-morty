@@ -2,19 +2,51 @@
 @config "../tailwind.config.js";
 
 @font-face {
-  font-family: Grobold;
-  src: url(/public/Fonts/Grobold/Grobold-any9.woff2) format('woff2'),
-       url(/public/Fonts/Grobold/Grobold-any9.woff) format('woff'),
-       url(/public/Fonts/Grobold/Grobold-any9.svg) format('svg'),
-       url(/public/Fonts/Grobold/Grobold.ttf) format('ttf')
+  font-family: Arnorg;
+  src: url(/public/Fonts/Arnorg/arnorg.woff2) format('woff2'),
+       url(/public/Fonts/Arnorg/arnorg.woff) format('woff'),
+       url(/public/Fonts/Arnorg/arnorg.svg) format('svg'),
+       url(/public/Fonts/Arnorg/arnorg.ttf) format('ttf')
 }
 
 @font-face {
+  font-family: Badaga;
+  src: url(/public/Fonts/Badaga/badaga.woff2) format('woff2'),
+       url(/public/Fonts/Badaga/badaga.woff) format('woff'),
+       url(/public/Fonts/Badaga/badaga.svg) format('svg'),
+       url(/public/Fonts/Badaga/badaga.ttf) format('ttf')
+}
+
+/* @font-face {
   font-family: Bluetea;
   src: url(/public/Fonts/Bluetea/Bluetea.woff2) format('woff2'),
        url(/public/Fonts/Bluetea/Bluetea.woff) format('woff'),
        url(/public/Fonts/Bluetea/Bluetea.svg) format('svg'),
        url(/public/Fonts/Bluetea/Bluetea.ttf) format('ttf')
+} */
+
+@font-face {
+  font-family: GoldieBoxing;
+  src: url(/public/Fonts/GoldieBoxing/goldieBoxing.woff2) format('woff2'),
+       url(/public/Fonts/GoldieBoxing/goldieBoxing.woff) format('woff'),
+       url(/public/Fonts/GoldieBoxing/goldieBoxing.svg) format('svg'),
+       url(/public/Fonts/GoldieBoxing/goldieBoxing.ttf) format('ttf')
+}
+
+@font-face {
+  font-family: Grobold;
+  src: url(/public/Fonts/Grobold/grobold.woff2) format('woff2'),
+       url(/public/Fonts/Grobold/grobold.woff) format('woff'),
+       url(/public/Fonts/Grobold/grobold.svg) format('svg'),
+       url(/public/Fonts/Grobold/grobold.ttf) format('ttf')
+}
+
+@font-face {
+  font-family: HFComic;
+  src: url(/public/Fonts/HFComic/hfcomic.woff2) format('woff2'),
+       url(/public/Fonts/HFComic/hfcomic.woff) format('woff'),
+       url(/public/Fonts/HFComic/hfcomic.svg) format('svg'),
+       url(/public/Fonts/HFComic/hfcomic.ttf) format('ttf')
 }
 
 :root {
