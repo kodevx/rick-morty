@@ -11,7 +11,6 @@ export default function NotFound() {
         width={100}
         height={100}
         alt={'404_not_found'}
-        className={''}
       />
       <Link href="/">Return Home</Link>
     </div>
