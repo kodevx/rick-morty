@@ -1,0 +1,26 @@
+query AllCartoonCharacter {
+    characters {
+        results {
+            id
+            name
+            species
+            type
+            gender
+            image
+            origin {
+            name 
+            # url
+            }
+            location {
+            name 
+            # url
+            }
+        }
+        info {
+            count
+            pages
+            next
+            prev
+        }
+    }
+}
