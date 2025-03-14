@@ -1,5 +1,5 @@
-query AllCartoonCharacter {
-    characters {
+query AllCartoonCharacter($page: Int!) {
+    characters(page: $page) {
         results {
             id
             name
@@ -8,12 +8,12 @@ query AllCartoonCharacter {
             gender
             image
             origin {
-            name 
-            # url
+                name 
+                # url
             }
             location {
-            name 
-            # url
+                name 
+                # url
             }
         }
         info {

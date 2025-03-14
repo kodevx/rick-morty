@@ -24,7 +24,9 @@ export default function RootLayout({ children }) {
       <body className="px-7">
         <ApolloContext>
           <Header />
-          {children}
+          <div className="mt-12">
+            {children}
+          </div>
         </ApolloContext>
       </body>
     </html>
