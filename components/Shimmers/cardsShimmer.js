@@ -2,7 +2,7 @@
 export default function CardsShimmer () {
     return (
         <>
-            <div className="h-10 w-64 mb-10 self-center bg-gray-200 animate-pulse "/>
+            {/* <div className="h-10 w-64 mb-10 self-center bg-gray-200 animate-pulse "/> */}
             <div className="h-72 w-200 p-11 flex flex-row shadow-xl animate-pulse rounded-2xl">
                 <div className="flex self-center h-64 w-64 bg-gray-200 rounded-4xl" />
                 <div className="flex-grow self-center ml-10">
@@ -37,11 +37,11 @@ export default function CardsShimmer () {
                     </div>
                 </div>
             </div>
-            <div className="flex self-center pt-8">
+            {/* <div className="flex self-center pt-8">
                 <div className={"text-sm h-6 w-6 self-center bg-gray-200 shadow-lg shadow-gray-200 rounded-2xl"} />
                 <div className={"text-md mx-4 h-9 w-9 self-center bg-gray-200 shadow-lg shadow-gray-200 rounded-3xl"} />
                 <div className={"text-sm h-6 w-6 self-center bg-gray-200 shadow-lg shadow-gray-200 rounded-2xl"} />
-            </div>
+            </div> */}
         </>
     )
 }
