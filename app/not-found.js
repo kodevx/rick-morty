@@ -5,7 +5,7 @@ import NotFoundImage from '@/assets/Image/image_404_2.png';
 
 export default function NotFound() {
   return (
-    <div className='flex justify-center items-center flec-col'>
+    <div className='flex justify-center items-center flex-col'>
       <Image 
         src={NotFoundImage}
         width={100}

@@ -1,6 +1,7 @@
 'use client'
-// import Button from '@/components/Button';
+
 import CharacterCards from "@/components/CharacterCards";
+import CardsShimmer from "@/components/Shimmers/cardsShimmer";
 import Pagination from "@/components/Pagination";
 import useHome from "@/customHooks/Home/useHome";
 
@@ -13,16 +14,31 @@ const Home = () => {
     handleNext, 
     handlePrev,
     totalCount,
+    isCalled,
     isLoading,
     paginationState,
-    handlePageUpdate
+    handlePageUpdate,
   } = useHome({
     queries: { 
       getAllCartoonCharactersQuery: GET_ALL_CARTOON_CHARACTER_QUERY
     }
   });
 
+  if(isLoading || !characters) {
+    return (
+      <div className="flex flex-col justify-center mt-5 items-center">
+        <CardsShimmer />
+      </div>
+    )
+  } else if(isCalled && characters.length === 0){
+    return (
+      'No Characters to show'
+    )
+  }
+
   console.log("Data: ",characters);
+
+  console.log("isPending: ",isLoading);
 
   return (
     <div>
@@ -36,10 +52,11 @@ const Home = () => {
           <div className="text-2xl self-center">{`All Characters (${totalCount})`}</div>
           <div className="px-20 py-5 flex flex-col justify-center items-center">
             <div className="flex flex-col justify-between">
-              {characters && 
-               characters.length > 0 
-                ? characters.map(character => (<CharacterCards key={character.id} {...character} />))
-                : isLoading ? 'loading...' /* <Shimmer /> */ : null}   {/* TODO: Add Shimmer Component */}
+              {characters && characters.length > 0 && (
+                characters.map(character => (
+                  <CharacterCards key={character.id} {...character} />
+                ))
+              )}
             </div>
             <div className="py-10">
               <Pagination 

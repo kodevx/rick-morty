@@ -13,7 +13,7 @@ const initialState = {
 }
 
 function reducer (state, action) {
-    console.log("action: ",action);
+
     switch(action.type) {
         case INCREMENT_PAGE: {
             return {

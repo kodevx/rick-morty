@@ -24,7 +24,7 @@ const useHome = (props) => {
 
     const [
         runCharactersQuery,
-        { data, loading, error }
+        { data, loading, error, isCalled }
     ] = useLazyQuery(getAllCartoonCharactersQuery, { 
         fetchPolicy: 'no-cache',
         onCompleted: (data) => {
@@ -67,7 +67,8 @@ const useHome = (props) => {
         characters,
         totalCount,
         paginationState,
-        isLoading: isPending,
+        isLoading: isPending || loading,
+        isCalled,
         handleNext, 
         handlePrev,
         handlePageUpdate
