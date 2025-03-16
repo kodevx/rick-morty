@@ -34,7 +34,9 @@ const Home = () => {
     <div>
       <main>
         <div className="flex flex-col font-grobold mt-5">
-          <div className="text-2xl self-center">{`All Characters ${totalCount ? `(${totalCount})` : ''}`}</div>
+          <div className="text-2xl self-center tracking-wider">
+            All Characters <span className="text-green-600">({`${totalCount ? totalCount : ''}`})</span>
+          </div>
           <div className="px-20 py-5 flex flex-col justify-center items-center">
             <div className="flex flex-col justify-between">
               {isLoading || !characters 
