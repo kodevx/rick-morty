@@ -29,19 +29,19 @@ const CharacterCards = (props) => {
                     </div>
                     <div className="flex-grow self-center ml-10">
                         <div>
-                            Name: <span className="group-hover:text-amber-500 transition-all duration-300">{name}</span>
+                            Name: <span className="group-hover:text-amber-500 transition-all duration-300 tracking-wider">{name}</span>
                         </div>
                         <div>
-                            Species: <span className="group-hover:text-green-600 transition-all duration-300">{species}</span>
+                            Species: <span className="group-hover:text-green-600 transition-all duration-300 tracking-wider">{species}</span>
                         </div>
                         <div>
-                            Gender: <span className="group-hover:text-green-600 transition-all duration-300">{gender}</span>
+                            Gender: <span className="group-hover:text-green-600 transition-all duration-300 tracking-wider">{gender}</span>
                         </div>
                         <div>
-                            Origin: <span className="group-hover:text-green-600 transition-all duration-300">{origin.name}</span>
+                            Origin: <span className="group-hover:text-green-600 transition-all duration-300 tracking-wider">{origin.name}</span>
                         </div>
                         <div>
-                            Location: <span className="group-hover:text-green-600 transition-all duration-300">{location.name}</span>
+                            Location: <span className="group-hover:text-green-600 transition-all duration-300 tracking-wider">{location.name}</span>
                         </div>
                     </div>
             </div>
