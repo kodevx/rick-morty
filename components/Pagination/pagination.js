@@ -9,7 +9,6 @@ const Pagination = (props) => {
         prevPage,
         currentPage,
         totalPages,
-        totalCount,
         handleNext,
         handlePrev, 
         handlePageUpdate
