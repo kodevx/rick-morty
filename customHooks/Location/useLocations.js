@@ -5,7 +5,9 @@ import usePagination from "../Pagination/usePagination";
 
 import { NEXT } from '@/constants/constants';
 
-const useLocation = (props) => {
+const useLocations = (props) => {
+
+    const { id } = props;
 
     const [locations, setLocations] = useState(null);
     const [isPending, startTransition] = useTransition();
@@ -26,6 +28,9 @@ const useLocation = (props) => {
         { loading, error, isCalled }
     ] = useLazyQuery(getAllLocationsQuery, { 
         fetchPolicy: 'no-cache',
+        variables: {
+            id
+        },
         onCompleted: (data) => {
             startTransition(() => {
                 setLocations(data.locations.results);
@@ -74,4 +79,4 @@ const useLocation = (props) => {
     }
 }
 
-export default useLocation;
+export default useLocations;

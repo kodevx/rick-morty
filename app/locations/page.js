@@ -3,11 +3,11 @@
 import LocationCards from "@/components/LocationCards";
 import CardsShimmer from "@/components/Shimmers/cardsShimmer";
 import Pagination from "@/components/Pagination";
-import useLocation from "@/customHooks/Location/useLocation";
+import useLocations from "@/customHooks/Location/useLocations";
 
 import GET_ALL_LOCATIONS_QUERY from '@/queries/getAllLocations.graphql';
 
-const Location = () => {
+const Locations = () => {
 
     const {
       locations,
@@ -18,7 +18,7 @@ const Location = () => {
       isLoading,
       paginationState,
       handlePageUpdate,
-    } = useLocation({
+    } = useLocations({
       queries: { 
         getAllLocationsQuery: GET_ALL_LOCATIONS_QUERY
       }
@@ -63,4 +63,4 @@ const Location = () => {
   );
 }
 
-export default Location;
+export default Locations;

@@ -13,7 +13,7 @@ const LocationCards = (props) => {
     } = props;
 
     return (
-        <Link href={`/location/${id}`}>
+        <Link href={`/locations/${id}`}>
             <div className="text-grobold cursor-pointer h-72 w-200 ease-in-out group group-hover:translate-x-1 transition-all duration-300 hover:scale-105 p-11 flex flex-row shadow-xl">
                 <div className="flex-grow self-center ml-10">
                     <div>
