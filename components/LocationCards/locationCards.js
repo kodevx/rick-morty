@@ -14,8 +14,8 @@ const LocationCards = (props) => {
 
     return (
         <Link href={`/locations/${id}`}>
-            <div className="text-grobold cursor-pointer h-72 w-200 ease-in-out group group-hover:translate-x-1 transition-all duration-300 hover:scale-105 p-11 flex flex-row shadow-xl">
-                <div className="flex-grow self-center ml-10">
+            <div className="text-grobold cursor-pointer h-69 w-auto ease-in-out group group-hover:translate-x-1 transition-all duration-300 hover:scale-105 p-5 flex flex-row shadow-xl">
+                <div className="flex-grow self-center ml-8">
                     <div>
                         Name: <span className="group-hover:text-amber-500 transition-all duration-300 tracking-wider">{name}</span>
                     </div>

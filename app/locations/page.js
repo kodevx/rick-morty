@@ -38,7 +38,7 @@ const Locations = () => {
             All Locations <span className="text-green-600">({`${totalCount ? totalCount : ''}`})</span>
           </div>
           <div className="px-20 py-5 flex flex-col justify-center items-center">
-            <div className="flex flex-col justify-between">
+            <div className="grid grid-cols-2 gap-5 justify-between">
               {isLoading || !locations 
                 ? <CardsShimmer /> 
                 : locations && locations.length > 0 && (

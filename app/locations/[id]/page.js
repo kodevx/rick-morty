@@ -26,22 +26,20 @@ const Location = props => {
 
     console.log("location: ",location);
 
-    const isDimensionUnknown = 
-        location && location.dimension 
-            ? location.dimension 
-            : null;
+    const isDimensionUnknown = !!(location && location.dimension);
 
     return (
-        <div className='mb-10'>
-            <div className='grid grid-cols-3 gap-10 font-grobold z-10'>
-                <div className='flex flex-col px-9 py-8 ease-in-out group group-hover:translate-x-1 transition-all duration-300 hover:scale-105 shadow-xl rounded-lg'>
-                    <div className='flex justify-center tracking-wider text-xl group-hover:text-amber-500 mb-5 pb-2 border-b-2 border-b-emerald-400'>
-                        Location
-                    </div>
-                    <div className='pb-1'>Name : <span className='group-hover:text-green-600 tracking-wider'>{location?.name}</span></div>
-                    <div className='pb-1'>Dimension : <span className={isDimensionUnknown ? 'group-hover:text-red-600 tracking-wider' : 'group-hover:text-green-600 tracking-wider'}>{location?.dimension}</span></div>
-                    <div className='pb-1'>Type : <span className='group-hover:text-green-600 tracking-wider'>{location?.type}</span></div>
+        <div className='mb-10 font-grobold'>
+            <div className='text-amber-500 text-3xl flex justify-center'>
+                Location
+            </div>
+            <div className='text-green-600 text-2xl tracking-wider pt-10 flex justify-center'>{location?.name}</div>
+            {!isDimensionUnknown && (
+                <div className={isDimensionUnknown ? 'group-hover:text-red-600 tracking-wider' : 'group-hover:text-green-600 tracking-wider'}>
+                    {location?.dimension}
                 </div>
+            )}
+            <div className='grid grid-cols-3 gap-10 font-grobold z-10 pt-3'>
                 <div className='flex flex-col col-span-full px-9 py-8 ease-in-out shadow-xl rounded-lg'>
                     <div className='flex justify-center tracking-wider text-xl hover:text-amber-500 mb-5 pb-2 border-b-2 border-b-emerald-400'>
                         Residents
