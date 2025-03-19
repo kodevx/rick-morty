@@ -10,12 +10,14 @@
   },
   "dependencies": {
     "@apollo/client": "^3.13.3",
+    "@reduxjs/toolkit": "^2.6.1",
     "graphql": "^16.10.0",
     "graphql-tag": "^2.12.6",
     "next": "15.2.1",
     "postcss": "^8.5.3",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "react-redux": "^9.2.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
