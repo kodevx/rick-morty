@@ -6,7 +6,8 @@ const Button = (props) => {
         label,
         styles, 
         handleClick,
-        isDisabled
+        isDisabled,
+        children
     } = props;
 
     return (
@@ -15,7 +16,7 @@ const Button = (props) => {
             className={styles}
             onClick={handleClick}
         >
-            {label}
+            {children ? children : label}
         </button>
     )
 }

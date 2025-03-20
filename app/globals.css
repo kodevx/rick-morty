@@ -73,3 +73,61 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.heart {
+  position: relative;
+  width: 100px;
+  height: 90px;
+  margin-top: 10px;
+}
+
+.heart::before, .heart::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 20px;
+  height: 31px;
+  border-radius: 68px 68px 0 0;
+  background: red;
+}
+
+.heart::before {
+  left: 19px;
+  transform: rotate(-45deg);
+  transform-origin: 0 100%;
+}
+
+.heart::after {
+  left: 0;
+  transform: rotate(45deg);
+  transform-origin: 100% 100%;
+}
+
+.heartGrey {
+  position: relative;
+  width: 100px;
+  height: 90px;
+  margin-top: 10px;
+}
+
+.heartGrey::before, .heartGrey::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 20px;
+  height: 31px;
+  border-radius: 68px 68px 0 0;
+  background: grey;
+}
+
+.heartGrey::before {
+  left: 19px;
+  transform: rotate(-45deg);
+  transform-origin: 0 100%;
+}
+
+.heartGrey::after {
+  left: 0;
+  transform: rotate(45deg);
+  transform-origin: 100% 100%;
+}
