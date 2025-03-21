@@ -6,6 +6,7 @@ import Image from 'next/image';
 import useCharacter from '@/customHooks/Character/useCharacter';
 
 import GET_CHARACTER_DETAILS_QUERY from '@/queries/getCartoonCharacter.graphql';
+import Favourite from '@/components/Favourite';
 
 const Character = (props) => {
 
@@ -39,9 +40,12 @@ const Character = (props) => {
 
     return (
         <div className='mb-10'>
+            <div className='flex justify-end mr-10'>
+                <Favourite id={id} />
+            </div>
             <div className={'flex justify-center mb-10'}>
                 <Image 
-                    src={image}
+                    src={image ? image : null}
                     height={320}
                     width={320}
                     className={'p-2 border-3 border-amber-600 rounded-[200px]'}
