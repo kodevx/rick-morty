@@ -5,12 +5,12 @@ import CardsShimmer from "@/components/Shimmers/cardsShimmer";
 import Pagination from "@/components/Pagination";
 import useEpisodes from "@/customHooks/Episodes/useEpisodes";
 
-import GET_ALL_EPISODES_QUERY from '@/queries/getAllLocations.graphql';
+import GET_ALL_EPISODES_QUERY from '@/queries/getAllEpisodes.graphql';
 
 const Episodes = (props) => {
 
     const {
-      locations,
+      episodes,
       handleNext, 
       handlePrev,
       totalCount,
@@ -41,9 +41,9 @@ const Episodes = (props) => {
             <div className="grid grid-cols-2 gap-5 justify-between">
               {isLoading || !locations 
                 ? <CardsShimmer /> 
-                : locations && locations.length > 0 && (
-                    locations.map(location => (
-                      <LocationCards key={location.id} {...location} />
+                :   episodes && episodes.length > 0 && (
+                    episodes.map(episode => (
+                      <Episode key={location.id} {...episode} />
                     ))
                   )
               }
