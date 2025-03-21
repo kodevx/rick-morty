@@ -48,12 +48,14 @@ const Character = (props) => {
                     alt={`${name}-image`}
                 />
             </div>
+            <div className='pb-1 font-grobold text-4xl flex justify-center mb-10 hover:text-green-600 tracking-wider'>
+                {name}
+            </div>
             <div className='grid grid-cols-3 gap-10 font-grobold z-10'>
                 <div className='flex flex-col px-9 py-8 ease-in-out group group-hover:translate-x-1 transition-all duration-300 hover:scale-105 shadow-xl rounded-lg'>
                     <div className='flex justify-center tracking-wider text-xl group-hover:text-amber-500 mb-5 pb-2 border-b-2 border-b-emerald-400'>
                         Character Info
                     </div>
-                    <div className='pb-1'>Name : <span className='group-hover:text-green-600 tracking-wider'>{name}</span></div>
                     <div className='pb-1'>Gender : <span className='group-hover:text-green-600 tracking-wider'>{gender}</span></div>
                     <div className='pb-1'>Species : <span className='group-hover:text-green-600 tracking-wider'>{species}</span></div>
                     <div className='pb-1'>Status : <span className='group-hover:text-green-600 tracking-wider'>{status}</span></div>
