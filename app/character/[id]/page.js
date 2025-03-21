@@ -4,9 +4,10 @@
 import { useParams } from 'next/navigation'; 
 import Image from 'next/image';               
 import useCharacter from '@/customHooks/Character/useCharacter';
+import Favourite from '@/components/Favourite';
+import CharacterPageShimmer from '@/components/Shimmers/characterPageShimmer'
 
 import GET_CHARACTER_DETAILS_QUERY from '@/queries/getCartoonCharacter.graphql';
-import Favourite from '@/components/Favourite';
 
 const Character = (props) => {
 
@@ -21,6 +22,12 @@ const Character = (props) => {
             getCharacterDetailsQuery: GET_CHARACTER_DETAILS_QUERY
         }
     });
+
+    if(isLoading && !characterDetails) {
+        return (
+            <CharacterPageShimmer />
+        )
+    }
 
     const { 
         episode,
@@ -45,7 +52,7 @@ const Character = (props) => {
             </div>
             <div className={'flex justify-center mb-10'}>
                 <Image 
-                    src={image ? image : null}
+                    src={image}
                     height={320}
                     width={320}
                     className={'p-2 border-3 border-amber-600 rounded-[200px]'}
