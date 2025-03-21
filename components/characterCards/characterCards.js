@@ -45,7 +45,9 @@ const CharacterCards = (props) => {
                         Location: <span className="group-hover:text-green-600 transition-all duration-300 tracking-wider">{location.name}</span>
                     </div>
                 </div>
-                <Favourites id={id} />
+                <div className="flex flex-row justify-end items-baseline">
+                    <Favourites id={id} />
+                </div>
             </div>
         </Link>
     )

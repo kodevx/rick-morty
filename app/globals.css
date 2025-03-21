@@ -76,23 +76,23 @@ body {
 
 .heart {
   position: relative;
-  width: 100px;
-  height: 90px;
-  margin-top: 10px;
+  width: 21px;
+  height: 21px;
+  margin-top: 0px;
 }
 
 .heart::before, .heart::after {
   content: "";
   position: absolute;
   top: 0;
-  width: 20px;
-  height: 31px;
+  width: 16px;
+  height: 26px;
   border-radius: 68px 68px 0 0;
   background: red;
 }
 
 .heart::before {
-  left: 19px;
+  left: 16px;
   transform: rotate(-45deg);
   transform-origin: 0 100%;
 }
@@ -105,23 +105,23 @@ body {
 
 .heartGrey {
   position: relative;
-  width: 100px;
-  height: 90px;
-  margin-top: 10px;
+  width: 21px;
+  height: 21px;
+  margin-top: 0px;
 }
 
 .heartGrey::before, .heartGrey::after {
   content: "";
   position: absolute;
   top: 0;
-  width: 20px;
-  height: 31px;
+  width: 16px;
+  height: 26px;
   border-radius: 68px 68px 0 0;
   background: grey;
 }
 
 .heartGrey::before {
-  left: 19px;
+  left: 16px;
   transform: rotate(-45deg);
   transform-origin: 0 100%;
 }
