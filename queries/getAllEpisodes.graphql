@@ -1,4 +1,4 @@
-query AllEpisodes($page: Int!) {
+query getAllEpisodes($page: Int!) {
     episodes(page: $page) {
       info {
         count

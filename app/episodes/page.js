@@ -1,11 +1,11 @@
 'use client'
 
-import LocationCards from "@/components/LocationCards";
-import CardsShimmer from "@/components/Shimmers/cardsShimmer";
+import EpisodeShimmer from "@/components/Shimmers/episodeShimmer";
 import Pagination from "@/components/Pagination";
+import Episode from '@/components/Episode/episode';
 import useEpisodes from "@/customHooks/Episodes/useEpisodes";
 
-import GET_ALL_EPISODES_QUERY from '@/queries/getAllEpisodes.graphql';
+import GET_ALL_EPISODES_QUERY from "@/queries/getAllEpisodes.graphql";
 
 const Episodes = (props) => {
 
@@ -20,30 +20,38 @@ const Episodes = (props) => {
       handlePageUpdate,
     } = useEpisodes({
       queries: { 
-        getAllEpisodessQuery: GET_ALL_EPISODES_QUERY
+        getAllEpisodesQuery: GET_ALL_EPISODES_QUERY
       }
     });
 
-  if(isCalled && locations.length === 0) { 
-    <div className="flex flex-col justify-center mt-5 items-center">
-      No Locations Found
-    </div>
+  if(isCalled && episodes.length === 0) { 
+    return ( 
+      <div className="flex flex-col justify-center mt-5 items-center">
+        No Epsiodes Found
+      </div>
+    )
   }
+
 
   return (
     <div>
       <main>
         <div className="flex flex-col font-grobold mt-5">
           <div className="text-2xl self-center tracking-wider">
-            All Locations <span className="text-green-600">({`${totalCount ? totalCount : ''}`})</span>
+            All Episodes 
+            {totalCount ? (
+              <span className="text-green-600 ml-1">
+                ({totalCount})
+              </span>
+            ) : null}
           </div>
           <div className="px-20 py-5 flex flex-col justify-center items-center">
-            <div className="grid grid-cols-2 gap-5 justify-between">
-              {isLoading || !locations 
-                ? <CardsShimmer /> 
+            <div>
+              {isLoading || !episodes 
+                ? <EpisodeShimmer /> 
                 :   episodes && episodes.length > 0 && (
                     episodes.map(episode => (
-                      <Episode key={location.id} {...episode} />
+                      <Episode key={episode.id} {...episode} />
                     ))
                   )
               }

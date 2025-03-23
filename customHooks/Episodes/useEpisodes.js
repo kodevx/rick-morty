@@ -7,14 +7,12 @@ import { NEXT } from '@/constants/constants';
 
 const useEpisodes = (props) => {
 
-    const { id } = props;
-
     const [episodes, setEpisodes] = useState(null);
     const [isPending, startTransition] = useTransition();
 
-    const { 
-        queries: { getAllEpsiodesQuery } 
-    } = props;
+    const { queries } = props;
+
+    const { getAllEpisodesQuery } = queries;
 
     const [
         paginationState,
@@ -24,23 +22,20 @@ const useEpisodes = (props) => {
     const { totalCount } = paginationState;
 
     const [
-        runEpisodessQuery,
+        runEpisodesQuery,
         { loading, error, isCalled }
-    ] = useLazyQuery(getAllEpsiodesQuery, { 
-        variables: {
-            id
-        },
-        onCompleted: (data) => {
-            startTransition(() => {
-                setEpisodes(data.episodes.results);
-                handleTotalPagesAndCount({ ...data.episodes.info });
-            });
-        }
-    });
+    ] = useLazyQuery(getAllEpisodesQuery, { 
+            onCompleted: (data) => {
+                startTransition(() => {
+                    setEpisodes(data.episodes.results);
+                    handleTotalPagesAndCount({ ...data.episodes.info });
+                });
+            }
+        });
 
     useEffect(
         () => {
-            runEpisodessQuery({ 
+            runEpisodesQuery({ 
                 variables: { page: 1 } 
             });
         },
@@ -55,7 +50,7 @@ const useEpisodes = (props) => {
                         ? pagePosition + 1
                         : pagePosition - 1
 
-                await runEpisodessQuery({ 
+                await runEpisodesQuery({ 
                     variables: { page: currentPage } 
                 });
 
@@ -63,7 +58,7 @@ const useEpisodes = (props) => {
                 console.log("Page Update Callback Error: ",error);
             }
         }, 
-        [runEpisodessQuery]
+        [runEpisodesQuery]
     );
 
     return {
