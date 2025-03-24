@@ -5,6 +5,7 @@ import { useParams } from 'next/navigation';
 import Image from 'next/image';               
 import useCharacter from '@/customHooks/Character/useCharacter';
 import Favourite from '@/components/Favourite';
+import NotFoundPage from '../not-found';
 import CharacterPageShimmer from '@/components/Shimmers/characterPageShimmer'
 
 import GET_CHARACTER_DETAILS_QUERY from '@/queries/getCartoonCharacter.graphql';
@@ -15,6 +16,7 @@ const Character = (props) => {
 
     const {
         isLoading,
+        isCalled,
         characterDetails
     } = useCharacter({
         id,
@@ -23,9 +25,18 @@ const Character = (props) => {
         }
     });
 
+    console.log("characterDetails: ",characterDetails);
+
     if(isLoading && !characterDetails) {
         return (
             <CharacterPageShimmer />
+        )
+    } else if (
+        isCalled &&
+        !characterDetails 
+    ){
+        return (
+            <NotFoundPage />
         )
     }
 
@@ -39,7 +50,7 @@ const Character = (props) => {
         species,
         status,
         type
-    } = characterDetails || {};
+    } = characterDetails;
 
     console.log("Character: ",characterDetails);
 

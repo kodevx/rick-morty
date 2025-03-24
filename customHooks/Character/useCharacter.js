@@ -29,6 +29,7 @@ const useCharacter = props => {
 
     return {
         isLoading,
+        isCalled,
         characterDetails
     }
 }
