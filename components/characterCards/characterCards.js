@@ -49,7 +49,7 @@ const CharacterCards = (props) => {
                     <Favourites id={id} />
                 </div>
             </div>
-        </Link>
+        </Link> 
     )
 }
 
