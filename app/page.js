@@ -1,6 +1,6 @@
 'use client'
 
-import CharacterCards from "@/components/CharacterCards";
+import CharacterCards from "@/components/characterCards";
 import CardsShimmer from "@/components/Shimmers/cardsShimmer";
 import Pagination from "@/components/Pagination";
 import useHome from "@/customHooks/Home/useHome";
