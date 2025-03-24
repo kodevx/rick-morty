@@ -11,8 +11,7 @@ const nextConfig = {
       },
       images: {
         domains: ['rickandmortyapi.com'],
-      },
-      output: 'export'
+      }
 };
 
 export default nextConfig;

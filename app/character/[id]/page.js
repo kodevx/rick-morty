@@ -50,7 +50,7 @@ const Character = (props) => {
         species,
         status,
         type
-    } = characterDetails;
+    } = characterDetails || {};
 
     console.log("Character: ",characterDetails);
 
