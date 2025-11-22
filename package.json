@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@apollo/client": "^3.13.3",
-    "@reduxjs/toolkit": "^2.6.1",
+    "@reduxjs/toolkit": "^2.8.2",
     "graphql": "^16.10.0",
     "graphql-tag": "^2.12.6",
     "next": "15.2.1",
